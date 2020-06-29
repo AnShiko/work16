@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить пользователя</title>
+</head>
+
+<html>
+
+<body>
+
+<form th:action="@{/adduser}" th:object="${user}" method="post">
+    <span>id</span>
+    <input th:field="*{id}" type="hidden">
+    </p>
+    <span>username</span>
+    <input th:field="*{username}">
+    </p>
+    <span>password</span>
+    <input th:field="*{password}">
+    </p>
+    <span>name</span>
+    <input th:field="*{name}">
+    </p>
+    <span>email</span>
+    <input th:field="*{email}">
+    </p>
+    <span>roles</span>
+    <input th:field="*{roles}">
+    </p>
+    <button type="submit">Сохранить</button>
+</form>
+
+</body>
+</html>
